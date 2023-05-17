@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     args = request.args
-    name = args.get('name') if args.get('name') else 'Заголовок'
+    name = args.get('name') if args.get('name') else 'имя'
     message = args.get('message') if args.get('message') else 'Текст сообщения'
     return render_template('index.html', name=name, message=message)
 
